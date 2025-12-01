@@ -6,10 +6,22 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "eslint"
+    "lint": "eslint",
+    "type-check": "tsc --noEmit",
+    "db:generate": "supabase gen types typescript --project-id $SUPABASE_PROJECT_ID > src/lib/supabase/types.ts",
+    "db:push": "supabase db push",
+    "db:reset": "supabase db reset",
+    "db:studio": "supabase studio"
   },
   "dependencies": {
+    "@harbour-enterprises/superdoc": "^0.34.2",
+    "@supabase/auth-helpers-nextjs": "^0.15.0",
+    "@supabase/supabase-js": "^2.86.0",
+    "docx": "^9.5.1",
+    "jspdf": "^3.0.4",
+    "lucide-react": "^0.555.0",
     "next": "16.0.6",
+    "openai": "^6.9.1",
     "react": "19.2.0",
     "react-dom": "19.2.0"
   },
